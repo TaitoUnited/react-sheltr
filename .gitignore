@@ -1,6 +1,7 @@
 dist
 .nyc_output
 umd
+lib
 
 # Logs
 logs

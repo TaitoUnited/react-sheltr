@@ -1,17 +1,23 @@
 {
   "name": "react-sheltr",
-  "version": "1.0.0",
+  "version": "0.0.0-sematic-versioned",
   "description": "Shared element transition helper for React",
-  "main": "index.js",
+  "main": "lib/react-sheltr.js",
+  "module": "lib/react-sheltr.es.js",
   "directories": {
     "example": "examples"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commit": "git-cz",
+    "test": "jest",
+    "prebuild": "rimraf lib",
+    "build": "rollup -c",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "clean:install": "rimraf node_modules && npm install"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Temzasse/playground.git"
+    "url": "git+https://github.com/TaitoUnited/react-sheltr.git"
   },
   "keywords": [
     "react",
@@ -20,10 +26,43 @@
     "transition",
     "animation"
   ],
-  "author": "Teemu Taskula <teemu.taskula@taitounited.fi>",
+  "files": ["lib"],
+  "author": "Taito United Oy <support@taitounited.fi>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Temzasse/playground/issues"
+    "url": "https://github.com/TaitoUnited/react-sheltr/issues"
   },
-  "homepage": "https://github.com/Temzasse/playground#readme"
+  "homepage": "https://github.com/TaitoUnited/react-sheltr#readme",
+  "unpkg": "dist/react-sheltr.min.js",
+  "peerDependencies": {
+    "react": ">=16.3"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "commitizen": "2.10.1",
+    "cz-conventional-changelog": "2.1.0",
+    "dom-testing-library": "2.3.2",
+    "husky": "0.14.3",
+    "jest": "23.0.0",
+    "prettier": "^1.10.2",
+    "react-dom": "16.4.0",
+    "react-testing-library": "3.1.3",
+    "react": "16.4.0",
+    "rimraf": "2.6.2",
+    "rollup-plugin-babel": "3.0.4",
+    "rollup": "0.59.3",
+    "semantic-release": "^15.5.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  }
 }
