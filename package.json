@@ -1,0 +1,29 @@
+{
+  "name": "react-sheltr",
+  "version": "1.0.0",
+  "description": "Shared element transition helper for React",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Temzasse/playground.git"
+  },
+  "keywords": [
+    "react",
+    "shared",
+    "element",
+    "transition",
+    "animation"
+  ],
+  "author": "Teemu Taskula <teemu.taskula@taitounited.fi>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Temzasse/playground/issues"
+  },
+  "homepage": "https://github.com/Temzasse/playground#readme"
+}
