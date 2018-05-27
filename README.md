@@ -6,7 +6,7 @@
 
 # React Sheltr
 
-> Shared Element Transitions (Sh El Tr -> Sheltr 😉) for your React applications.
+> Shared Element Transitions (Sh El Tr -> Sheltr) for your React applications.
 
 ## Installation
 
