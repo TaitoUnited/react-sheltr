@@ -11,8 +11,8 @@ const propTypes = {
 
 const SheltrExamples = ({ match }) => (
   <Wrapper>
-    <ExampleItem to={`${match.url}/list`}>Simple List</ExampleItem>
-    <ExampleItem to={`${match.url}/gallery`}>Image Gallery</ExampleItem>
+    <ExampleItem to="/list">Simple List</ExampleItem>
+    <ExampleItem to="/gallery">Image Gallery</ExampleItem>
   </Wrapper>
 );
 

@@ -1,8 +1,8 @@
 {
-  "name": "playground",
+  "name": "react-sheltr-examples",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://temzasse.github.io/playground",
+  "homepage": "https://TaitoUnited.github.io/react-sheltr",
   "dependencies": {
     "gh-pages": "^1.1.0",
     "react": "^16.3.2",

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Route, Switch } from 'react-router-dom';
+import Sheltr from 'react-sheltr';
 
-import Sheltr from './Sheltr';
 import ItemList from './ItemList';
 import ItemDetails from './ItemDetails';
 import Gallery from './Gallery';
@@ -10,11 +10,6 @@ import ExamplesList from './ExamplesList';
 
 class SheltrExamples extends Component {
   state = {
-    musicPlayerTrack: {
-      image: 'https://source.unsplash.com/IocJwyqRv3M/200x200',
-      artist: 'Fooband',
-      name: 'Baztrack'
-    },
     items: [
       {
         id: 'item_1',
@@ -88,30 +83,20 @@ class SheltrExamples extends Component {
 
   render() {
     const { items, imagesByCol } = this.state;
-    const { match } = this.props;
 
     return (
       <Wrapper>
         <Sheltr delay={200}>
           <Switch>
-            {/* Gallery */}
-            {/* <Route
-              path={`${match.url}/gallery/:id`}
-              render={({ match: { params }, ...rest }) => (
-                <GalleryItem
-                  {...rest}
-                  image={this.getImage(imagesByCol, params.id)}
-                />
-              )}
-            /> */}
+            {/* Gallery example */}
             <Route
-              path={`${match.url}/gallery`}
+              path="/gallery"
               render={props => <Gallery {...props} images={imagesByCol} />}
             />
 
-            {/* Item List */}
+            {/* Item List example */}
             <Route
-              path={`${match.url}/list/:id`}
+              path="/list/:id"
               render={({ match: { params }, ...rest }) => (
                 <ItemDetails
                   {...rest}
@@ -120,7 +105,7 @@ class SheltrExamples extends Component {
               )}
             />
             <Route
-              path={`${match.url}/list`}
+              path="/list"
               render={props => <ItemList {...props} items={items} />}
             />
 

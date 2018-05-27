@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { SharedElement } from './Sheltr';
+import { SharedElement } from 'react-sheltr';
 import GalleryItem from './GalleryItem';
 
 class Gallery extends Component {

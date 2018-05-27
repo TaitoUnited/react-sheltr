@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
-
-import Playground from './components/Playground';
-import SheltrExamples from './components/sheltr';
+import Root from './components/Root';
 
 const NavControls = () => (
   <Route
@@ -30,8 +28,7 @@ class App extends Component {
         <Wrapper>
           <NavControls />
           <Content>
-            <Route exact path="/" component={Playground} />
-            <Route path="/shared-element-transitions" component={SheltrExamples} />
+            <Root />
           </Content>
         </Wrapper>
       </BrowserRouter>

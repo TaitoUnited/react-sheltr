@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { SharedElement } from './Sheltr';
+import { SharedElement } from 'react-sheltr';
 
 const propTypes = {
   hideImage: PropTypes.func.isRequired,

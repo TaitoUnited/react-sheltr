@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
-import { SharedElement } from './Sheltr';
+import { SharedElement } from 'react-sheltr';
 
 class ItemDetails extends Component {
   static propTypes = {
