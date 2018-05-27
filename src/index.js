@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+// TODO: add warnings and errors for misuse.
+
 const SheltrContext = React.createContext();
 
 // Shared Element Transition --> Sh El Tr --> Sheltr
@@ -36,18 +38,24 @@ class Sheltr extends Component {
       ...this.state, // pass state if someone wants to do something with it
       'data-sheltr-id': sharedId,
     };
-  }
-
-  getSharedElements = () => {
-    return [
-      ...document.querySelectorAll(`[data-sheltr-id="${this.sharedId}"]`),
-    ];
   };
 
+  getSharedElements = () => {
+    return Array.from(
+      document.querySelectorAll(`[data-sheltr-id="${this.sharedId}"]`)
+    );
+  };
+
+  // Active element is always the one that has not been
+  // marked with `data-sheltr-read` data attribute.
+  // Also, there should be only one or two shared elements in the DOM
+  // at a time and only one of them can have `data-sheltr-read` attribute set
+  // so we can return the first filtered element and that should be
+  // the active one (active meaning the one relevant for either `readFirst`
+  // or `readLast`)
   getActiveElement = () => {
     const els = this.getSharedElements();
-    const [el] = els.filter(({ dataset }) => !dataset.sheltrRead);
-    return el;
+    return els.filter(el => !el.getAttribute('data-sheltr-read'))[0];
   };
 
   clearState = () => {
@@ -70,7 +78,7 @@ class Sheltr extends Component {
     const { x, y, width, height } = el.getBoundingClientRect();
 
     this.unmarkSharedElements(); // remove `data-sheltr-read` from others first
-    el.setAttribute('data-sheltr-read', 'true'); // then mark el as read
+    el.setAttribute('data-sheltr-read', 'true'); // then mark element as read
 
     this.first = { x, y, width, height };
   };
