@@ -1,10 +1,16 @@
+<p align='center'>
+  <br><br><br>
+  <img src="logo.png" height="100"/>
+  <br><br><br>
+<p/>
+
 # React Sheltr
 
-React Sheltr helps you implement Shared Element Transitions (Sh El Tr -> Sheltr 😉) in your React applications.
+> Shared Element Transitions (Sh El Tr -> Sheltr 😉) for your React applications.
 
 ## Installation
 
-```
+```sh
 npm install react-sheltr
 ```
 
@@ -14,6 +20,7 @@ NOTE: this is not a npm package yet...
 
 * [What is it?](#what-is-it-)
 * [Usage](#usage)
+* [API Reference](#api-reference)
 * [Examples](#examples)
 
 ## What is it?
