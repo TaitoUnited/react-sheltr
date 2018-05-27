@@ -12,8 +12,10 @@
     "test": "jest",
     "prebuild": "rimraf lib",
     "build": "rollup -c",
+    "build:watch": "rollup -c --watch",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "clean:install": "rimraf node_modules && npm install"
+    "clean:install": "rimraf node_modules && npm install",
+    "link:examples": "npm link && cd examples && npm link react-sheltr"
   },
   "repository": {
     "type": "git",
@@ -26,16 +28,18 @@
     "transition",
     "animation"
   ],
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "author": "Taito United Oy <support@taitounited.fi>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/TaitoUnited/react-sheltr/issues"
   },
   "homepage": "https://github.com/TaitoUnited/react-sheltr#readme",
-  "unpkg": "dist/react-sheltr.min.js",
+  "unpkg": "lib/react-sheltr.js",
   "peerDependencies": {
-    "react": ">=16.3"
+    "react": ">=16.3.0"
   },
   "dependencies": {
     "prop-types": "^15.6.1"
@@ -53,12 +57,12 @@
     "husky": "0.14.3",
     "jest": "23.0.0",
     "prettier": "^1.10.2",
+    "react": "16.4.0",
     "react-dom": "16.4.0",
     "react-testing-library": "3.1.3",
-    "react": "16.4.0",
     "rimraf": "2.6.2",
-    "rollup-plugin-babel": "3.0.4",
     "rollup": "0.59.3",
+    "rollup-plugin-babel": "3.0.4",
     "semantic-release": "^15.5.0"
   },
   "config": {
