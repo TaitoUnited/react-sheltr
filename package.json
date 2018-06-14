@@ -1,5 +1,5 @@
 {
-  "name": "react-sheltr",
+  "name": "@taito/react-sheltr",
   "version": "0.0.0-sematic-versioned",
   "description": "Shared element transition helper for React",
   "main": "lib/react-sheltr.js",
@@ -13,7 +13,7 @@
     "prebuild": "rimraf lib",
     "build": "rollup -c",
     "build:watch": "rollup -c --watch",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "semantic-release": "semantic-release pre && npm publish --access=public && semantic-release post",
     "clean:install": "rimraf node_modules && npm install",
     "link:examples": "npm link && cd examples && npm link react-sheltr"
   },
