@@ -24,10 +24,9 @@ class Sheltr extends Component {
   first = null;
   last = null;
 
-  // Put `isTransitioning` inside React compoennt state so that changes made
+  // Put `isTransitioning` inside React component state so that changes made
   // to it cause a re-render.
   state = {
-    // TODO: not sure what this can be used for...
     isTransitioning: false,
   };
 
