@@ -1,11 +1,14 @@
 {
   "name": "@taito/react-sheltr",
-  "version": "0.0.0-sematic-versioned",
+  "version": "0.0.0-development",
   "description": "Shared element transition helper for React",
   "main": "lib/react-sheltr.js",
   "module": "lib/react-sheltr.es.js",
   "directories": {
     "example": "examples"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "commit": "git-cz",
@@ -13,13 +16,14 @@
     "prebuild": "rimraf lib",
     "build": "rollup -c",
     "build:watch": "rollup -c --watch",
-    "semantic-release": "semantic-release pre && npm publish --access=public && semantic-release post",
+    "semantic-release": "semantic-release",
     "clean:install": "rimraf node_modules && npm install",
-    "link:examples": "npm link && cd examples && npm link react-sheltr"
+    "link:examples": "npm link && cd examples && npm link react-sheltr",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TaitoUnited/react-sheltr.git"
+    "url": "https://github.com/TaitoUnited/react-sheltr.git"
   },
   "keywords": [
     "react",
@@ -63,7 +67,8 @@
     "rimraf": "2.6.2",
     "rollup": "0.59.3",
     "rollup-plugin-babel": "3.0.4",
-    "semantic-release": "^15.5.0"
+    "semantic-release": "^15.5.2",
+    "travis-deploy-once": "^5.0.0"
   },
   "config": {
     "commitizen": {
