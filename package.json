@@ -18,7 +18,7 @@
     "build:watch": "rollup -c --watch",
     "semantic-release": "semantic-release",
     "clean:install": "rimraf node_modules && npm install",
-    "link:examples": "npm link && cd examples && npm link react-sheltr",
+    "link:examples": "npm link && cd examples && npm link @taito/react-sheltr",
     "travis-deploy-once": "travis-deploy-once"
   },
   "repository": {
