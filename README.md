@@ -11,10 +11,8 @@
 ## Installation
 
 ```sh
-npm install react-sheltr
+npm install @taito/react-sheltr
 ```
-
-NOTE: this is not a npm package yet...
 
 ## Table of Contents
 
