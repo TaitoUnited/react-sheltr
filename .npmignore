@@ -2,5 +2,4 @@
 .gitignore
 .npmignore
 src
-webpack.config.js
 examples
