@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { SharedElement } from 'react-sheltr';
+import { SharedElement } from '@taito/react-sheltr';
 
 class ItemList extends Component {
   static propTypes = {

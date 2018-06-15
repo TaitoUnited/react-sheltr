@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Route, Switch } from 'react-router-dom';
-import Sheltr from 'react-sheltr';
+import Sheltr from '@taito/react-sheltr';
 
 import ItemList from './ItemList';
 import ItemDetails from './ItemDetails';

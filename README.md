@@ -48,7 +48,7 @@ Note that it doesn't really need to be at the root level but somewhere above
 the `SharedElement` components that are used later.
 
 ```javascript
-import Sheltr from 'react-sheltr';
+import Sheltr from '@taito/react-sheltr';
 
 <Sheltr>
   {/* other components go here */}
@@ -63,7 +63,7 @@ Here we have two related image components: Component A that starts the transitio
 it is clicked, which is the default behaviour, and Component B when it's unmounted.
 
 ```javascript
-import { SharedElement } from 'react-sheltr';
+import { SharedElement } from '@taito/react-sheltr';
 
 // Component A
 <SharedElement sharedId={id}>
@@ -117,7 +117,7 @@ you can use `withSheltr` Higher Order Component to gain access to the underlying
 API and manually handle things that `ShareElement` would do for you.
 
 ```javascript
-import { withSheltr } from 'react-sheltr';
+import { withSheltr } from '@taito/react-sheltr';
 
 class ComponentA extends Component {
   componentDidMount() {
@@ -149,7 +149,7 @@ export default withSheltr(ComponentA);
 ```
 
 ```javascript
-import { withSheltr } from 'react-sheltr';
+import { withSheltr } from '@taito/react-sheltr';
 
 class ComponentB extends Component {
   componentDidMount() {
